@@ -1,0 +1,3 @@
+int32 sleep_time_before_reboot
+---
+int32 response_status
