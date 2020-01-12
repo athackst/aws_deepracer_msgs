@@ -5,5 +5,5 @@ int32 height
 int32 num_channels
 int32 platform
 ---
-string artifactPath
-int32 hasError
+string artifact_path
+int32 has_error

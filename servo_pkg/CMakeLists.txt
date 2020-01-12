@@ -1,24 +1,29 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
+
 project(servo_pkg)
 
-# Get the information about this package's buildtime dependencies
-find_package(catkin REQUIRED
-    COMPONENTS message_generation std_msgs)
+if(NOT WIN32)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra")
+endif()
 
-# Declare the service files to be built
-add_service_files(FILES
-    CarCtrlSrv.srv
-    GetCalSrv.srv
-    GetLedCtrlSrv.srv
-    ServoCalSrv.srv
-    ServoGPIOSrv.srv
-    SetLedCtrlSrv.srv
+find_package(ament_cmake REQUIRED)
+find_package(builtin_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+    "srv/CarCtrlSrv.srv"
+    "srv/GetCalSrv.srv"
+    "srv/GetLedCtrlSrv.srv"
+    "srv/ServoCalSrv.srv"
+    "srv/ServoGPIOSrv.srv"
+    "srv/SetLedCtrlSrv.srv"
+    DEPENDENCIES builtin_interfaces
 )
 
-# Actually generate the language-specific message and service files
-generate_messages(DEPENDENCIES std_msgs)
+ament_export_dependencies(rosidl_default_runtime)
 
-# Declare that this catkin package's runtime dependencies
-catkin_package(
-CATKIN_DEPENDS message_runtime std_msgs
-)
+ament_package()
+
+install(
+  FILES rosbridge_mapping_rules.yaml
+  DESTINATION share/${PROJECT_NAME})

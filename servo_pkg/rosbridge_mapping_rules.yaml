@@ -1,0 +1,32 @@
+# This file defines mappings between ROS 1 and ROS 2 interfaces.
+# It is used with the ros1_bridge to allow for communcation between ROS 1 and ROS 2.
+
+# Services
+- ros1_package_name: "servo_pkg"
+  ros1_service_name: "CarCtrlSrv"
+  ros2_package_name: "servo_pkg"
+  ros2_service_name: "CarCtrlSrv"
+- ros1_package_name: "servo_pkg"
+  ros1_service_name: "GetCalSrv"
+  ros2_package_name: "servo_pkg"
+  ros2_service_name: "GetCalSrv"
+  fields_1_to_2:
+    calType: "cal_type"
+- ros1_package_name: "servo_pkg"
+  ros1_service_name: "GetLedCtrlSrv"
+  ros2_package_name: "servo_pkg"
+  ros2_service_name: "GetLedCtrlSrv"
+- ros1_package_name: "servo_pkg"
+  ros1_service_name: "ServoCalSrv"
+  ros2_package_name: "servo_pkg"
+  ros2_service_name: "ServoCalSrv"
+  fields_1_to_2:
+    calType: "cal_type"
+- ros1_package_name: "servo_pkg"
+  ros1_service_name: "ServoGPIOSrv"
+  ros2_package_name: "servo_pkg"
+  ros2_service_name: "ServoGPIOSrv"
+- ros1_package_name: "servo_pkg"
+  ros1_service_name: "SetLedCtrlSrv"
+  ros2_package_name: "servo_pkg"
+  ros2_service_name: "SetLedCtrlSrv"

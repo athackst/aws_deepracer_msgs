@@ -1,5 +1,5 @@
-string artifactPath
-int8 taskType
-int8 preProcessType
+string artifact_path
+int8 task_type
+int8 pre_process_type
 ---
 int32 error

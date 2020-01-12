@@ -4,7 +4,7 @@ int32 width
 int32 height
 int32 num_channels
 int32 platform
-int8 taskType
-int8 preProcessType
+int8 task_type
+int8 pre_process_type
 ---
-int32 hasError
+int32 has_error

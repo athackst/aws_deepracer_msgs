@@ -1,0 +1,39 @@
+# This file defines mappings between ROS 1 and ROS 2 interfaces.
+# It is used with the ros1_bridge to allow for communcation between ROS 1 and ROS 2.
+
+# Services
+- ros1_package_name: "software_update_pkg"
+  ros1_service_name: "BeginSoftwareUpdateSrv"
+  ros2_package_name: "software_update_pkg"
+  ros2_service_name: "BeginSoftwareUpdateSrv"
+- ros1_package_name: "software_update_pkg"
+  ros1_service_name: "ConsoleUploadModelSrv"
+  ros2_package_name: "software_update_pkg"
+  ros2_service_name: "ConsoleUploadModelSrv"
+  fields_1_to_2:
+    modelPath: "model_path"
+- ros1_package_name: "software_update_pkg"
+  ros1_service_name: "GetDeviceInfoSrv"
+  ros2_package_name: "software_update_pkg"
+  ros2_service_name: "GetDeviceInfoSrv"
+- ros1_package_name: "software_update_pkg"
+  ros1_service_name: "OTGLinkStateSrv"
+  ros2_package_name: "software_update_pkg"
+  ros2_service_name: "OTGLinkStateSrv"
+- ros1_package_name: "software_update_pkg"
+  ros1_service_name: "SoftwareUpdateGetStateSrv"
+  ros2_package_name: "software_update_pkg"
+  ros2_service_name: "SoftwareUpdateGetStateSrv"
+  fields_1_to_2:
+    forceUpdateCheck: "force_update_check"
+    softwareUpdateState: "software_update_state"
+- ros1_package_name: "software_update_pkg"
+  ros1_service_name: "SoftwareUpdateStatusSrv"
+  ros2_package_name: "software_update_pkg"
+  ros2_service_name: "SoftwareUpdateStatusSrv"
+- ros1_package_name: "software_update_pkg"
+  ros1_service_name: "VerifyModelReadySrv"
+  ros2_package_name: "software_update_pkg"
+  ros2_service_name: "VerifyModelReadySrv"
+  fields_1_to_2:
+    modelName: "model_name"

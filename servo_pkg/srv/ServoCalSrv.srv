@@ -1,4 +1,4 @@
-int32 calType
+int32 cal_type
 int32 max
 int32 mid
 int32 min
