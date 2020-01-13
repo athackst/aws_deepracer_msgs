@@ -18,7 +18,3 @@ find_package(rosidl_default_generators REQUIRED)
  ament_export_dependencies(rosidl_default_runtime)
 
 ament_package()
-
-install(
-  FILES rosbridge_mapping_rules.yaml
-  DESTINATION share/${PROJECT_NAME})
