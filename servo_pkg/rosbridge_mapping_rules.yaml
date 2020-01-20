@@ -6,27 +6,58 @@
   ros1_service_name: "CarCtrlSrv"
   ros2_package_name: "servo_pkg"
   ros2_service_name: "CarCtrlSrv"
+  request_fields_1_to_2:
+    angle: "angle"
+    throttle: "throttle"
+  response_fields_1_to_2:
+    error: "error"
 - ros1_package_name: "servo_pkg"
   ros1_service_name: "GetCalSrv"
   ros2_package_name: "servo_pkg"
   ros2_service_name: "GetCalSrv"
-  fields_1_to_2:
+  request_fields_1_to_2:
     calType: "cal_type"
+  response_fields_1_to_2:
+    max: "max"
+    mid: "mid"
+    min: "min"
+    polarity: "polarity"
+    error: "error"
 - ros1_package_name: "servo_pkg"
   ros1_service_name: "GetLedCtrlSrv"
   ros2_package_name: "servo_pkg"
   ros2_service_name: "GetLedCtrlSrv"
+  response_fields_1_to_2:
+    red: "red"
+    green: "green"
+    blue: "blue"
 - ros1_package_name: "servo_pkg"
   ros1_service_name: "ServoCalSrv"
   ros2_package_name: "servo_pkg"
   ros2_service_name: "ServoCalSrv"
-  fields_1_to_2:
+  request_fields_1_to_2:
     calType: "cal_type"
+    max: "max"
+    mid: "mid"
+    min: "min"
+    polarity: "polarity"
+  response_fields_1_to_2:
+    error: "error"
 - ros1_package_name: "servo_pkg"
   ros1_service_name: "ServoGPIOSrv"
   ros2_package_name: "servo_pkg"
   ros2_service_name: "ServoGPIOSrv"
+  request_fields_1_to_2:
+    enable: "enable"
+  response_fields_1_to_2:
+    error: "error"
 - ros1_package_name: "servo_pkg"
   ros1_service_name: "SetLedCtrlSrv"
   ros2_package_name: "servo_pkg"
   ros2_service_name: "SetLedCtrlSrv"
+  request_fields_1_to_2:
+    red: "red"
+    green: "green"
+    blue: "blue"
+  response_fields_1_to_2:
+    error: "error"

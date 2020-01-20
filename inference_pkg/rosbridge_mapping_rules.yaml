@@ -17,25 +17,40 @@
   ros1_message_name: "InferResultsArray"
   ros2_package_name: "inference_pkg"
   ros2_message_name: "InferResultsArray"
+  fields_1_to_2:
+    results: "results"
+    img: "img"
 # Services
 - ros1_package_name: "inference_pkg"
   ros1_service_name: "InferenceStateSrv"
   ros2_package_name: "inference_pkg"
   ros2_service_name: "InferenceStateSrv"
-  fields_1_to_2:
+  request_fields_1_to_2:
+    start: "start"
     taskType: "task_type"
+  response_fields_1_to_2:
+    error: "error"
 - ros1_package_name: "inference_pkg"
   ros1_service_name: "LoadModelSrv"
   ros2_package_name: "inference_pkg"
   ros2_service_name: "LoadModelSrv"
-  fields_1_to_2:
+  request_fields_1_to_2:
     artifactPath: "artifact_path"
     taskType: "task_type"
     preProcessType: "pre_process_type"
+  response_fields_1_to_2:
+    error: "error"
 - ros1_package_name: "inference_pkg"
   ros1_service_name: "ModelOptimize"
   ros2_package_name: "inference_pkg"
   ros2_service_name: "ModelOptimize"
-  fields_1_to_2:
+  request_fields_1_to_2:
+    model_name: "model_name"
+    img_format: "img_format"
+    width: "width"
+    height: "height"
+    num_channels: "num_channels"
+    platform: "platform"
+  response_fields_1_to_2:
     artifactPath: "artifact_path"
     hasError: "has_error"

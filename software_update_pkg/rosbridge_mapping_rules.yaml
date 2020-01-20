@@ -6,34 +6,54 @@
   ros1_service_name: "BeginSoftwareUpdateSrv"
   ros2_package_name: "software_update_pkg"
   ros2_service_name: "BeginSoftwareUpdateSrv"
+  request_fields_1_to_2:
+    sleep_time_before_reboot: "sleep_time_before_reboot"
+  response_fields_1_to_2:
+    response_status: "response_status"
 - ros1_package_name: "software_update_pkg"
   ros1_service_name: "ConsoleUploadModelSrv"
   ros2_package_name: "software_update_pkg"
   ros2_service_name: "ConsoleUploadModelSrv"
-  fields_1_to_2:
+  request_fields_1_to_2:
     modelPath: "model_path"
+    upload: "upload"
+  response_fields_1_to_2:
+    status: "status"
 - ros1_package_name: "software_update_pkg"
   ros1_service_name: "GetDeviceInfoSrv"
   ros2_package_name: "software_update_pkg"
   ros2_service_name: "GetDeviceInfoSrv"
+  response_fields_1_to_2:
+    hardware_version: "hardware_version"
+    software_version: "software_version"
 - ros1_package_name: "software_update_pkg"
   ros1_service_name: "OTGLinkStateSrv"
   ros2_package_name: "software_update_pkg"
   ros2_service_name: "OTGLinkStateSrv"
+  response_fields_1_to_2:
+    link_state: "link_state"
 - ros1_package_name: "software_update_pkg"
   ros1_service_name: "SoftwareUpdateGetStateSrv"
   ros2_package_name: "software_update_pkg"
   ros2_service_name: "SoftwareUpdateGetStateSrv"
-  fields_1_to_2:
+  request_fields_1_to_2:
     forceUpdateCheck: "force_update_check"
+  response_fields_1_to_2:
     softwareUpdateState: "software_update_state"
 - ros1_package_name: "software_update_pkg"
   ros1_service_name: "SoftwareUpdateStatusSrv"
   ros2_package_name: "software_update_pkg"
   ros2_service_name: "SoftwareUpdateStatusSrv"
+  request_fields_1_to_2:
+    request: "request"
+  response_fields_1_to_2:
+    status: "status"
+    update_pct: "update_pct"
 - ros1_package_name: "software_update_pkg"
   ros1_service_name: "VerifyModelReadySrv"
   ros2_package_name: "software_update_pkg"
   ros2_service_name: "VerifyModelReadySrv"
-  fields_1_to_2:
+  request_fields_1_to_2:
     modelName: "model_name"
+  response_fields_1_to_2:
+    response_status: "response_status"
