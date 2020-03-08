@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>aws_deepracer_msgs</name>
+  <version>0.0.0</version>
+  <description>The aws_deepracer_msgs package</description>
+  <maintainer email="aws-deepracer@amazon.com">AWS DeepRacer</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>ctrl_pkg</exec_depend>
+  <exec_depend>i2c_pkg</exec_depend>
+  <exec_depend>inference_pkg</exec_depend>
+  <exec_depend>media_pkg</exec_depend>
+  <exec_depend>servo_pkg</exec_depend>
+  <exec_depend>software_update_pkg</exec_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
